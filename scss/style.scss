@@ -1,1 +1,8 @@
 @import 'settings', 'normalize','variables';
+
+
+body {
+    background-color:$background-dark-body;
+    font-family: 'Space Mono', monospace;
+    font-size:1.3rem;
+}

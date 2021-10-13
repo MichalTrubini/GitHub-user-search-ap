@@ -161,4 +161,10 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
+
+body {
+  background-color: #141D2F;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.3rem;
+}
 /*# sourceMappingURL=style.css.map */
