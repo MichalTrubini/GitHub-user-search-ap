@@ -197,8 +197,46 @@ body {
 
     &__social-content {
         opacity: 0.8;
+        color:white;
     }
 }
+
+button, input, .header__mode-switch {
+    cursor: pointer;
+}
+
+/**LIGHT THEME**/
+
+.body-light {
+    background-color: $background-light-body;
+    color:$color-light-main;
+    opacity:1;
+}
+
+.input-light, .main-light {
+    background-color: $background-light-main;
+    color:$color-light-main;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+.user-stats-light {
+    background-color: $background-light-body;
+}
+
+.user-social-content-light {
+    color:$color-light-main;
+    opacity:1;
+}
+
+.light-font-accent {
+    color:$color-light-accent;
+}
+
+.light-icon-accent {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(960%) hue-rotate(177deg) brightness(87%) contrast(84%);
+}
+
+/**LIGHT THEME**/
 
 @media screen and (min-width:768px) {
 
