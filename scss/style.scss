@@ -5,4 +5,332 @@ body {
     background-color:$background-dark-body;
     font-family: 'Space Mono', monospace;
     font-size:1.3rem;
+    color:$white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+}
+
+.container {
+    max-width:32.7rem;
+}
+
+.main {
+    margin-bottom:5rem;
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    margin:3.1rem 0 3.6rem;
+    width:32.7rem;
+
+    &__mode-switch {
+        display:flex;
+        align-items: center;
+    }
+
+    &__theme-name {
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        font-weight:700;
+        line-height: 1.9rem;
+        margin-right:1.6rem;
+    }
+
+    &__logo {
+        font-size:2.6rem;
+        font-weight:700;
+        line-height: 3.851rem;
+    }
+}
+
+.dev-search, .user {
+    background-color: $background-dark-main;
+    border-radius: 1.5rem;
+    font-weight:400;
+}
+
+.dev-search {
+
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    height:6rem;
+    margin-bottom:1.6rem;
+
+    &__input {
+        background-color: $background-dark-input;
+        outline:none;
+        border:none;
+        width:85%;
+        color:white;
+        opacity:0.8;
+    }
+
+    &__icon {
+        width:2rem;
+        margin-left:1.6rem;
+        margin-right:0.895rem;
+    }
+
+    &__button {
+        background: $background-button;
+        color:$white;
+        border:none;
+        padding:1.25rem 1.6rem;
+        font-size:1.4rem;
+        font-weight:700;
+        border-radius:1rem;
+        margin-right:0.6rem;
+    }
+}
+
+.dev-search-wrap {
+    display:flex;
+    align-items: center;
+    width:100%;
+}
+
+::placeholder {
+    color: white;
+    opacity:0.8;
+}
+
+.user {
+
+    padding: 3.2rem 2.4rem 4.8rem;
+
+    &__figure {
+        display:flex;
+    }
+
+    &__profile-pic-mobile {
+        width:70px;
+        border-radius: 50%;
+        margin-right:1.195rem;
+    }
+
+    &__profile-pic {
+        display:none;
+    }
+
+    &__name {
+        font-size:1.6rem;
+        font-weight:700;
+        line-height:2.37rem;
+    }
+
+    &__email {
+        color:$bright-blue;
+        line-height:1.925rem;
+    }
+
+    &__joined-date {
+        line-height: 1.925rem;
+        margin-top:0.6rem;
+        opacity: 0.8;
+    }
+
+    &__about {
+        margin: 3.3rem 0 2.3rem;
+        line-height:2.5rem;
+        opacity: 0.8;
+    }
+
+    &__stats {
+        display:flex;
+        justify-content: space-between;
+        background: $background-dark-body;
+        border-radius: 1.5rem;
+        padding:1.8rem 2.5rem 1.9rem 3.7rem;
+        margin-bottom:2.4rem;
+    }
+
+    &__stats-item {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__stats-heading {
+        font-size:1.1rem;
+        font-weight: 400;
+        line-height: 1.629rem;
+        margin-bottom:0.8rem;
+        opacity: 0.8;
+    }
+
+    &__stats-count {
+        font-size:1.6rem;
+        font-weight: 700;
+    }
+
+    &__social-item {
+        display:flex;
+        align-items: center;
+        margin-bottom:1.6rem;
+    }
+
+    &__social-item:last-child {
+        margin-bottom:0;
+    }
+
+    &__social-items:first-child {
+        margin-bottom: 1.6rem;
+    }
+
+    &__social-item-first {
+        margin-left:5px;
+    }
+
+    &__social-icon {
+        margin-right: 1.925rem;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(100%) contrast(103%);
+    }
+
+    &__social-icon-first {
+        margin-right:24px;
+    }
+
+    &__social-content {
+        opacity: 0.8;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    body {
+        font-size:1.5rem;
+    }
+
+    .container {
+        max-width:57.3rem;
+    }
+
+    .header {
+        width: 57.3rem;
+
+        &__theme-name {
+            font-size: 1.3rem;;
+        }
+    }
+    ::placeholder {
+        font-size:1.8rem;
+    }
+
+    .dev-search {
+
+        &__button {
+            font-size:1.6rem;
+        }
+
+        &__icon {
+            margin-left:3.2rem;
+            margin-right:2.394rem;
+        }
+    }
+
+    .user {
+
+        padding:4rem;
+
+        &__name {
+            font-size:2.6rem;
+            line-height: 3.851rem;;
+        }
+
+        &__email {
+            font-size: 1.6rem;
+            line-height: 2.37rem;
+        }
+
+        &__joined-date {
+            font-size: 1.5rem;
+            line-height: 2.222rem;
+        }
+
+        &__about {
+            margin-top:2.4rem;
+            margin-bottom: 3.2rem;
+        }
+
+        &__stats-heading {
+            font-size:1.3rem;
+        }
+
+        &__stats-count {
+            font-size: 2.2rem;;
+        }
+
+        &__profile-pic-mobile {
+            width:117px;
+            margin-right:4.1rem;
+        }
+
+        &__figure {
+            align-items: center;
+        }
+
+        &__stats {
+            margin-bottom:3rem;
+        }
+
+        &__stats-item {
+            align-items: flex-start;
+            width:20%;
+        }
+
+        &__social {
+            display:flex;
+            justify-content: space-between;
+        }
+
+        &__social-items {
+            width:50%;
+        }
+
+        &__social-items:last-child {
+            padding-left:3rem;
+        }
+
+        &__social-items:first-child {
+            margin-bottom:0;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .container {
+        max-width:73rem;
+    }
+
+    .header {
+        width:73rem;
+    }
+
+    .user {
+        display:flex;
+        padding:4.8rem;
+
+        &__profile-pic-mobile {
+            display:none;
+        }
+
+        &__profile-pic {
+            display:block;
+            width:117px;
+            height:117px;
+            border-radius:50%;
+            margin-right:3.7rem;
+        }
+
+        &__figcaption {
+            display:flex;
+            justify-content: space-between;
+            width:100%;
+        }
+    }
 }
