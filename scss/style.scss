@@ -126,14 +126,14 @@ body {
         line-height:2.37rem;
     }
 
-    &__email {
+    &__username {
         color:$bright-blue;
         line-height:1.925rem;
     }
 
     &__joined-date {
         line-height: 1.925rem;
-        margin-top:0.6rem;
+        margin-top:1.2rem;
         opacity: 0.8;
     }
 
@@ -207,6 +207,8 @@ body {
 button, input, .header__mode-switch {
     cursor: pointer;
 }
+
+.no-data {opacity:0.3}
 
 /**LIGHT THEME**/
 
@@ -287,7 +289,7 @@ button, input, .header__mode-switch {
             line-height: 3.851rem;;
         }
 
-        &__email {
+        &__username {
             font-size: 1.6rem;
             line-height: 2.37rem;
         }
@@ -359,6 +361,10 @@ button, input, .header__mode-switch {
     .user {
         display:flex;
         padding:4.8rem;
+
+        &__data {
+            min-width:48rem;
+        }
 
         &__profile-pic-mobile {
             display:none;

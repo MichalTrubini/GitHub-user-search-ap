@@ -1,3 +1,5 @@
+//VARIABLES ----START
+
 const themeSwitch = document.querySelector('.header__mode-switch');
 const bodyEl = document.body;
 const formEl = document.querySelector('.dev-search');
@@ -7,16 +9,24 @@ const userStatsEl = document.querySelector('.user__stats');
 const userSocial = document.querySelectorAll('.user__social-content');
 const fontAccent = document.querySelectorAll('.dark-font-accent');
 const iconAccent = document.querySelectorAll('.user__social-icon');
-const placeholderEl = document.querySelector('input[type=text]').style.setProperty("--c", "blue");
 
-themeSwitch.addEventListener('click', function (event) {
+const searchUser = document.querySelector('.dev-search__button');
+const userName = document.querySelector('#user-name');
+const userUsername = document.querySelector('#user-username');
+const userJoinedDate = document.querySelector('#user-joined-date');
+const userBio = document.querySelector('#user-bio');
 
-    themeSwitcher();
-    
-    event.preventDefault();
-})
+var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
-function themeSwitcher () {
+//VARIABLES ----END
+
+themeSwitch.addEventListener('click', themeSwitcher)
+searchUser.addEventListener('click', githubUserSearch)
+
+//FUNCTIONS ----START
+
+function themeSwitcher (event) {
 
     if (document.querySelector('.header__theme-name').innerText == "LIGHT") {
         document.querySelector('.header__theme-name').innerText = "DARK";
@@ -40,4 +50,25 @@ function themeSwitcher () {
     fontAccent.forEach(e => e.classList.toggle('light-font-accent'));
     iconAccent.forEach(e => e.classList.toggle('light-icon-accent'));
     
+    event.preventDefault();
 }
+
+
+function githubUserSearch (event) {
+
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            userName.innerText = data.name;
+            userUsername.innerText = '@' + data.login;
+            userJoinedDate.innerText = new Date(data.created_at).getDate().toString() + ' ' + months[new Date(data.created_at).getMonth()] + ' ' + new Date(data.created_at).getFullYear().toString();
+            if (data.bio === null) {
+                userBio.innerText ='This profile has no bio.';
+                userBio.classList.add('no-data');
+            } else {userBio.innerText = data.bio};
+        })
+
+    event.preventDefault();
+}
+
+//FUNCTIONS ----END
