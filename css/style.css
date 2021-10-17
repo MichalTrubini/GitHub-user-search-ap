@@ -301,6 +301,10 @@ body {
   opacity: 0.8;
 }
 
+.placeholder-color-switch::-webkit-input-placeholder {
+  color: #4B6A9B;
+}
+
 .user {
   padding: 3.2rem 2.4rem 4.8rem;
 }
@@ -454,6 +458,10 @@ button, input, .header__mode-switch {
 .light-icon-accent {
   -webkit-filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(960%) hue-rotate(177deg) brightness(87%) contrast(84%);
           filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(960%) hue-rotate(177deg) brightness(87%) contrast(84%);
+}
+
+.theme-switch-dark {
+  display: none;
 }
 
 /**LIGHT THEME**/

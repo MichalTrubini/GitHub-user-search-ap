@@ -1,6 +1,5 @@
 @import 'settings', 'normalize','variables';
 
-
 body {
     background-color:$background-dark-body;
     font-family: 'Space Mono', monospace;
@@ -98,6 +97,10 @@ body {
     color: white;
     opacity:0.8;
 }
+
+.placeholder-color-switch::-webkit-input-placeholder {
+    color: $color-light-main;
+ }
 
 .user {
 
@@ -234,6 +237,10 @@ button, input, .header__mode-switch {
 
 .light-icon-accent {
     filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(960%) hue-rotate(177deg) brightness(87%) contrast(84%);
+}
+
+.theme-switch-dark {
+    display:none;
 }
 
 /**LIGHT THEME**/

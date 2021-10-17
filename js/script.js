@@ -10,16 +10,26 @@ const iconAccent = document.querySelectorAll('.user__social-icon');
 const placeholderEl = document.querySelector('input[type=text]').style.setProperty("--c", "blue");
 
 themeSwitch.addEventListener('click', function (event) {
-    if (document.querySelector('.header__theme-name').innerText == "LIGHT") {
-    document.querySelector('.header__theme-name').innerText = "DARK";}
-        else if (document.querySelector('.header__theme-name').innerText == "DARK") {
-            document.querySelector('.header__theme-name').innerText = "LIGHT";}
+
     themeSwitcher();
     
     event.preventDefault();
 })
 
 function themeSwitcher () {
+
+    if (document.querySelector('.header__theme-name').innerText == "LIGHT") {
+        document.querySelector('.header__theme-name').innerText = "DARK";
+        document.querySelector('.theme-switch-light').style.display = "none"
+        document.querySelector('.theme-switch-dark').style.display = "inline-block";
+        document.querySelector('input[type=text]').classList.add('placeholder-color-switch');
+    }
+        else if (document.querySelector('.header__theme-name').innerText == "DARK") {
+            document.querySelector('.header__theme-name').innerText = "LIGHT";
+            document.querySelector('.theme-switch-light').style.display = "inline-block"
+            document.querySelector('.theme-switch-dark').style.display = "none"
+            document.querySelector('input[type=text]').classList.remove('placeholder-color-switch');
+        }
 
     bodyEl.classList.toggle('body-light');
     formEl.classList.toggle('input-light');
@@ -29,5 +39,5 @@ function themeSwitcher () {
     userSocial.forEach(e => e.classList.toggle('user-social-content-light'));
     fontAccent.forEach(e => e.classList.toggle('light-font-accent'));
     iconAccent.forEach(e => e.classList.toggle('light-icon-accent'));
-    return placeholderEl;
+    
 }
