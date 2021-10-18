@@ -184,7 +184,7 @@ body {
 }
 
 .container {
-  max-width: 32.7rem;
+  width: calc(100vw - 48px);
 }
 
 .main {
@@ -199,7 +199,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 3.1rem 0 3.6rem;
-  width: 32.7rem;
 }
 
 .header__mode-switch {
@@ -284,25 +283,30 @@ body {
 ::-webkit-input-placeholder {
   color: white;
   opacity: 0.8;
+  width: 95%;
 }
 
 :-ms-input-placeholder {
   color: white;
   opacity: 0.8;
+  width: 95%;
 }
 
 ::-ms-input-placeholder {
   color: white;
   opacity: 0.8;
+  width: 95%;
 }
 
 ::placeholder {
   color: white;
   opacity: 0.8;
+  width: 95%;
 }
 
 .placeholder-color-switch::-webkit-input-placeholder {
   color: #4B6A9B;
+  font-size: 1.3rem;
 }
 
 .user {
@@ -317,6 +321,7 @@ body {
 
 .user__profile-pic-mobile {
   width: 70px;
+  height: 70px;
   border-radius: 50%;
   margin-right: 1.195rem;
 }
@@ -432,6 +437,15 @@ button, input, .header__mode-switch {
   opacity: 0.3;
 }
 
+.icon-unavailable {
+  -webkit-filter: brightness(0) saturate(100%) invert(34%) sepia(15%) saturate(727%) hue-rotate(183deg) brightness(92%) contrast(88%);
+          filter: brightness(0) saturate(100%) invert(34%) sepia(15%) saturate(727%) hue-rotate(183deg) brightness(92%) contrast(88%);
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
 /**LIGHT THEME**/
 .body-light {
   background-color: #F6F8FF;
@@ -468,6 +482,15 @@ button, input, .header__mode-switch {
   display: none;
 }
 
+.no-data {
+  opacity: 0.5;
+}
+
+.icon-unavailable-light {
+  -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(8%) saturate(658%) hue-rotate(186deg) brightness(86%) contrast(96%);
+          filter: brightness(0) saturate(100%) invert(89%) sepia(8%) saturate(658%) hue-rotate(186deg) brightness(86%) contrast(96%);
+}
+
 /**LIGHT THEME**/
 @media screen and (min-width: 768px) {
   body {
@@ -492,6 +515,10 @@ button, input, .header__mode-switch {
     font-size: 1.8rem;
   }
   ::placeholder {
+    font-size: 1.8rem;
+  }
+  .placeholder-color-switch::-webkit-input-placeholder {
+    color: #4B6A9B;
     font-size: 1.8rem;
   }
   .dev-search__button {
@@ -528,6 +555,7 @@ button, input, .header__mode-switch {
   }
   .user__profile-pic-mobile {
     width: 117px;
+    height: 117px;
     margin-right: 4.1rem;
   }
   .user__figure {

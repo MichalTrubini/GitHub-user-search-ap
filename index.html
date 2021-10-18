@@ -18,8 +18,8 @@
     <p class="header__logo dark-font-accent">devfinder</p>
     <div class="header__mode-switch">
       <p class="header__theme-name">light</p>
-      <img src="assets/icon-sun.svg" alt="light mode switch" class="header__theme-icon user__social-icon theme-switch-light">
-      <img src="assets/icon-moon.svg" alt="light mode switch" class="header__theme-icon user__social-icon theme-switch-dark">
+      <img src="assets/icon-sun.svg" alt="light mode switch" class="header__theme-icon switch-icon theme-switch-light">
+      <img src="assets/icon-moon.svg" alt="light mode switch" class="header__theme-icon user__switch-icon theme-switch-dark">
     </div>
   </header>
 
@@ -27,15 +27,15 @@
     <form class="dev-search">
       <div class="dev-search-wrap">
         <img src="assets/icon-search.svg" alt="search" class="dev-search__icon">
-        <input type="text" class="dev-search__input" placeholder="Search GitHub username&hellip;">
+        <input type="text" class="dev-search__input" placeholder="Search GitHub username&hellip;" id="input-value" value="">
       </div>
       <button class="dev-search__button">Search</button>
     </form>
     <article class="user">
-      <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" class="user__profile-pic">
+      <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" class="user__profile-pic" id="avatar_url-desktop">
       <section class="user__data">
         <figure class="user__figure">
-          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" class="user__profile-pic-mobile">
+          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" class="user__profile-pic-mobile" id="avatar_url">
           <figcaption class="user__figcaption">
             <div>
               <h1 class="user__name dark-font-accent" id="user-name">The Octocat</h1>
@@ -47,42 +47,42 @@
             </div>
           </figcaption>
         </figure>
-        <p class="user__about" id="user-bio">
+        <p class="user__about" id="bio">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
         </p>
         <div class="user__stats">
           <div class="user__stats-item">
             <h2 class="user__stats-heading">Repos</h2>
-            <p class="user__stats-count dark-font-accent">8</p>
+            <p class="user__stats-count dark-font-accent" id="public_repos">8</p>
           </div>
           <div class="user__stats-item">
             <h2 class="user__stats-heading">Followers</h2>
-            <p class="user__stats-count dark-font-accent">3938</p>
+            <p class="user__stats-count dark-font-accent" id="followers">3938</p>
           </div>
           <div class="user__stats-item">
             <h2 class="user__stats-heading">Following</h2>
-            <p class="user__stats-count dark-font-accent">9</p>
+            <p class="user__stats-count dark-font-accent" id="following">9</p>
           </div>
         </div>
         <div class="user__social">
           <div class="user__social-items">
             <div class="user__social-item">
-              <img src="assets/icon-location.svg" alt="location" class="user__social-icon user__social-icon-first">
-              <p class="user__social-content">San Francisco</p>
+              <img src="assets/icon-location.svg" alt="location" class="user__social-icon user__social-icon-first" id="js-location-icon">
+              <p class="user__social-content" id="js-location">San Francisco</p>
             </div>
             <div class="user__social-item">
-              <img src="assets/icon-website.svg" alt="website" class="user__social-icon">
-              <a href="#" class="user__social-content">https://github.blog</a>
+              <img src="assets/icon-website.svg" alt="website" class="user__social-icon" id="js-blog-icon">
+              <a href="#" class="user__social-content" id="js-blog">https://github.blog</a>
             </div>
           </div>
           <div class="user__social-items">
             <div class="user__social-item">
-              <img src="assets/icon-twitter.svg" alt="twitter" class="user__social-icon">
-              <p class="user__social-content">Not available</p>
+              <img src="assets/icon-twitter.svg" alt="twitter" class="user__social-icon" id="js-twitter_username-icon">
+              <p class="user__social-content" id="js-twitter_username">Not available</p>
             </div>
             <div class="user__social-item">
-              <img src="assets/icon-company.svg" alt="company" class="user__social-icon">
-              <p class="user__social-content">agithub</p>
+              <img src="assets/icon-company.svg" alt="company" class="user__social-icon" id="js-company-icon">
+              <p class="user__social-content" id="js-company">agithub</p>
             </div>
           </div>
         </div>
