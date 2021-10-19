@@ -9,6 +9,8 @@ const userStatsEl = document.querySelector('.user__stats');
 const userSocial = document.querySelectorAll('.user__social-content');
 const fontAccent = document.querySelectorAll('.dark-font-accent');
 const iconAccent = document.querySelectorAll('.user__social-icon');
+const fetchError = document.querySelector('#dev-search__error-js');
+const fetchErrormb = document.querySelector('#dev-search__error-js-mb');
 
 const searchUser = document.querySelector('.dev-search__button');
 const userName = document.querySelector('#user-name');
@@ -72,11 +74,11 @@ function githubUserSearch (event) {
             if (response.ok) {
               return response.json()
             } else {
-              return Promise.reject(
-                   'error 404')
+              return rejection();
             } 
           })
         .then(data => {
+            
             userName.innerText = data.name;
             userUsername.innerText = '@' + data.login;
             userJoinedDate.innerText = new Date(data.created_at).getDate().toString() + ' ' + months[new Date(data.created_at).getMonth()] + ' ' + new Date(data.created_at).getFullYear().toString();
@@ -90,6 +92,8 @@ function githubUserSearch (event) {
             company.innerText = data.company;
             avatarUrlMobile.src=data.avatar_url;
             avatarUrlDesktop.src=data.avatar_url;
+            fetchError.style.display = 'none';
+            fetchErrormb.style.display = 'none'
 
             let keys = Object.keys(data);
 
@@ -118,5 +122,11 @@ function githubUserSearch (event) {
     event.preventDefault();
 }
 
-//FUNCTIONS ----END
+function rejection () {
 
+    if (window.screen.width >= 768) {fetchError.style.display = 'block';}
+    else {fetchErrormb.style.display = 'block';}
+    
+}
+
+//FUNCTIONS ----END

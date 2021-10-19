@@ -24,12 +24,16 @@
   </header>
 
   <main class="main container">
+    
     <form class="dev-search">
       <div class="dev-search-wrap">
         <img src="assets/icon-search.svg" alt="search" class="dev-search__icon">
         <input type="text" class="dev-search__input" placeholder="Search GitHub username&hellip;" id="input-value" value="">
+        <p class="dev-search__error" id = "dev-search__error-js">No results</p>
+        
       </div>
       <button class="dev-search__button">Search</button>
+      <p class="dev-search__error-mb" id = "dev-search__error-js-mb">No results</p>
     </form>
     <article class="user">
       <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" class="user__profile-pic" id="avatar_url-desktop">

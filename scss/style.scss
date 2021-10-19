@@ -58,6 +58,7 @@ body {
     align-items: center;
     height:6rem;
     margin-bottom:1.6rem;
+    position:relative;
 
     &__input {
         background-color: $background-dark-input;
@@ -84,12 +85,25 @@ body {
         border-radius:1rem;
         margin-right:0.6rem;
     }
+
+    &__error, &__error-mb {
+        display:none;
+    }
+
+    &__error-mb {
+        font-size:1.5rem;
+        color:$color-error;
+        position:absolute;
+        right:5px;
+        top:-20px;
+    }
 }
 
 .dev-search-wrap {
     display:flex;
     align-items: center;
     width:100%;
+    position:relative;
 }
 
 ::placeholder {
@@ -297,6 +311,17 @@ input:focus::-webkit-input-placeholder {
         &__icon {
             margin-left:3.2rem;
             margin-right:2.394rem;
+        }
+
+        &__error {
+            font-size:1.5rem;
+            color:$color-error;
+            position:absolute;
+            right:24px;
+        }
+
+        &__error-mb {
+            display:none;
         }
     }
 

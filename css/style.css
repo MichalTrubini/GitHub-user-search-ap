@@ -242,6 +242,7 @@ body {
           align-items: center;
   height: 6rem;
   margin-bottom: 1.6rem;
+  position: relative;
 }
 
 .dev-search__input {
@@ -270,6 +271,18 @@ body {
   margin-right: 0.6rem;
 }
 
+.dev-search__error, .dev-search__error-mb {
+  display: none;
+}
+
+.dev-search__error-mb {
+  font-size: 1.5rem;
+  color: #F74646;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
 .dev-search-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,6 +291,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  position: relative;
 }
 
 ::-webkit-input-placeholder {
@@ -527,6 +541,15 @@ input:focus::-webkit-input-placeholder {
   .dev-search__icon {
     margin-left: 3.2rem;
     margin-right: 2.394rem;
+  }
+  .dev-search__error {
+    font-size: 1.5rem;
+    color: #F74646;
+    position: absolute;
+    right: 24px;
+  }
+  .dev-search__error-mb {
+    display: none;
   }
   .user {
     padding: 4rem;
